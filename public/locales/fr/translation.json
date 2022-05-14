@@ -1,0 +1,34 @@
+{
+    "Language": {
+        "1": "Langage"
+    },
+    "LeftNav": {
+        "1": "Accueil",
+        "2": "Tableau de bord",
+        "3": "Parametres",
+        "4": "Aid",
+        "5": "Deconnecter"
+    },
+    "Dashboard": {
+        "1": "Tous",
+        "2": "Les Patients",
+        "3": "Les Ordonnances",
+        "4": "Les Bilans",
+        "5": "Na pas une Ordonnance",
+        "6": "Progres",
+        "7": "Les Patients d'aujourd'hui",
+        "8": "tous",
+        "9": "fait",
+        "10": "en attente"
+    },
+    "Header": {
+        "1": "Ajoute Patient"
+    },
+    "Home": {
+        "1": "Nom et Prenom",
+        "2": "Telephone",
+        "3": "Naissance",
+        "4": "Le Sexe",
+        "5": "Description"
+    }
+}

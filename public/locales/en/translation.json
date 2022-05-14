@@ -1,0 +1,34 @@
+{
+    "Language": {
+        "1": "Language"
+    },
+    "LeftNav": {
+        "1": "Home",
+        "2": "Dashboard",
+        "3": "Settings",
+        "4": "Help",
+        "5": "Logout"
+    },
+    "Dashboard": {
+        "1": "Total",
+        "2": "Patients",
+        "3": "Treatments",
+        "4": "Check-Ups",
+        "5": "Have no Treatments",
+        "6": "Progress",
+        "7": "Patients Today",
+        "8": "all",
+        "9": "done",
+        "10": "still"
+    },
+    "Header": {
+        "1": "Add Patient"
+    },
+    "Home": {
+        "1": "Full Name",
+        "2": "Phone",
+        "3": "Year of Birth",
+        "4": "Sex",
+        "5": "Description"
+    }
+}

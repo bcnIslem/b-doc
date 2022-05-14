@@ -4,6 +4,7 @@ import { Paper, Typography, Grid, Container, Button } from '@material-ui/core'
 import { useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 // actions
 import { getAllCheckUps } from '../../actions/checkUp'
@@ -132,6 +133,8 @@ const Dashboard = () => {
         dispatch(getStatistic(MONTHS, setPatientsStates))
     }, [dispatch, MONTHS])
 
+    const { t } = useTranslation()
+    
     return (
         <Grid className={classes.main}>
             <LeftNave />
@@ -153,7 +156,7 @@ const Dashboard = () => {
                                         <Typography variant='h6'>{patients?.length}</Typography>
                                     </Grid>
                                     <Grid className={classes.gridtitle}>
-                                        <Typography variant='body1'>Total<br /> Patients</Typography>
+                                        <Typography variant='body1'>{t('Dashboard.1')}<br /> {t('Dashboard.2')}</Typography>
                                     </Grid>
                                 </Paper>
 
@@ -163,7 +166,7 @@ const Dashboard = () => {
                                         <Typography variant='h6'>{treatments?.length}</Typography>
                                     </Grid>
                                     <Grid className={classes.gridtitle}>
-                                        <Typography variant='body1'>Total<br /> Treatments</Typography>
+                                        <Typography variant='body1'>{t('Dashboard.1')}<br /> {t('Dashboard.3')}</Typography>
                                     </Grid>
                                 </Paper>
 
@@ -173,7 +176,7 @@ const Dashboard = () => {
                                         <Typography variant='h6'>{checkUps?.length}</Typography>
                                     </Grid>
                                     <Grid className={classes.gridtitle}>
-                                        <Typography variant='body1'>Total<br /> CheckUps</Typography>
+                                        <Typography variant='body1'>{t('Dashboard.1')}<br /> {t('Dashboard.4')}</Typography>
                                     </Grid>
                                 </Paper>
 
@@ -209,7 +212,7 @@ const Dashboard = () => {
 
                             <Paper className={classes.bottonPaper} elevation={3}>
                                 <Grid className={classes.datepatients} >
-                                    <Typography variant='h6'>Have no Treatment: {noTreatment?.length}</Typography>
+                                    <Typography variant='h6'>{t('Dashboard.5')}: {noTreatment?.length}</Typography>
                                 </Grid>
                                 <Grid className={classes.scroll}>
                                     {!noTreatment?.length
@@ -239,11 +242,11 @@ const Dashboard = () => {
                                 </Grid>
                             </Paper>
                             <Paper className={classes.cerclePaper} elevation={3}>
-                                <Typography variant='h6' >Progress</Typography>
+                                <Typography variant='h6' >{t('Dashboard.6')}</Typography>
                                 <Grid className={classes.color}>
-                                    <Paper style={{backgroundColor: "#33A6FF"}} elevation={3} className={classes.coloritems}>all</Paper>
-                                    <Paper style={{backgroundColor: "#3be993"}} elevation={3} className={classes.coloritems}>done</Paper>
-                                    <Paper style={{backgroundColor: "#fc5a03"}} elevation={3} className={classes.coloritems}>still</Paper>
+                                    <Paper style={{backgroundColor: "#33A6FF"}} elevation={3} className={classes.coloritems}>{t('Dashboard.8')}</Paper>
+                                    <Paper style={{backgroundColor: "#3be993"}} elevation={3} className={classes.coloritems}>{t('Dashboard.9')}</Paper>
+                                    <Paper style={{backgroundColor: "#fc5a03"}} elevation={3} className={classes.coloritems}>{t('Dashboard.10')}</Paper>
                                 </Grid>
                                 <PatientChartCercle patients={patients?.length} patientsWith={done?.length} patientsWithout={undone} />
                             </Paper>
@@ -251,7 +254,7 @@ const Dashboard = () => {
                             {/* patients render with date */}
                             <Paper className={classes.datePaper} elevation={3}>
                                 <Grid className={classes.datepatients} >
-                                    <Typography variant='h6'>Patients Today: {patientsDate?.length}</Typography>
+                                    <Typography variant='h6'>{t('Dashboard.7')}: {patientsDate?.length}</Typography>
                                 </Grid>
                                 <Grid className={classes.scroll}>
                                     {!patientsDate?.length

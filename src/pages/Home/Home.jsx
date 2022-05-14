@@ -2,12 +2,12 @@
 // hooks
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Loading from '../../components/loading/Loading'
+import { useTranslation } from 'react-i18next'
 
 // components
 import Header from '../../components/header/Header'
 import Navbar from '../../components/nav/Navbar'
-import LeftNave from '../../components/leftNav/LeftNave'
+import Loading from '../../components/loading/Loading'
 import Patient from '../../components/patient/Patient'
 
 // ui components
@@ -35,6 +35,8 @@ const Home = () => {
         dispatch(getPatients())
     }, [dispatch])
 
+    const { t } = useTranslation()
+
     return (
         <div className={classes.main}>
         <Container className={classes.container} title='home'>
@@ -43,19 +45,19 @@ const Home = () => {
             <Paper className={classes.paper} elevation={3}>
                 <div className={classes.open}>
                 <Grid className={`${classes.grid} ${classes.show}`}>
-                    <Typography variant='h6'>Full Name</Typography>
+                    <Typography variant='h6'>{t('Home.1')}</Typography>
                 </Grid>
                 <Grid className={`${classes.grid} ${classes.hide}`}>
-                    <Typography variant='h6'>Phone</Typography>
+                    <Typography variant='h6'>{t('Home.2')}</Typography>
                 </Grid>
                 <Grid className={`${classes.grid} ${classes.hide}`}>
-                    <Typography variant='h6'>Birth Year</Typography>
+                    <Typography variant='h6'>{t('Home.3')}</Typography>
                 </Grid>
                 <Grid className={`${classes.grid} ${classes.hide}`}>
-                    <Typography variant='h6'>Sex</Typography>
+                    <Typography variant='h6'>{t('Home.4')}</Typography>
                 </Grid>
                 <Grid className={`${classes.griddesc} ${classes.hide}`}>
-                    <Typography variant='h6'>Description</Typography>
+                    <Typography variant='h6'>{t('Home.5')}</Typography>
                 </Grid>
                 </div>
                 <div className={classes.actions}>

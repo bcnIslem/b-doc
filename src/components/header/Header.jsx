@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../redux/redux-hooks'
 //hooks!
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 // material ui components
 import { Paper, Typography, Button } from "@material-ui/core"
@@ -28,6 +29,8 @@ export const Header = () => {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('minaDoc-app')))
     const doctor = user.result;
 
+    const { t } = useTranslation()
+
     return (
         <Paper className={classes.paper} elevation={3} title='header'>
             <Button className={classes.arrow} component={Link} to='/dashboard' title='arrow'><BsFillArrowLeftSquareFill size='30' /></Button>
@@ -40,7 +43,7 @@ export const Header = () => {
                 onClick={() => patientToUpdate ? dispatch(endPatientToUpdate(patientToUpdate.patientId)) : dispatch(endPatientToUpdate(0))} 
                 component={Link} 
                 to='/home/add'
-                >add patient</Button>
+                >{t('Header.1')}</Button>
             </div>
         </Paper>
     )

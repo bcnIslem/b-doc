@@ -1,21 +1,22 @@
 
 // hooks!
 import { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import moment from 'moment'
+import { useTranslation } from 'react-i18next'
 
 // actions
 import { LOGOUT } from '../../constants/actiontypes.js'
 
 // material components
-import { Button, Grid, Paper, Typography } from '@material-ui/core'
+import { Grid, Paper, Typography } from '@material-ui/core'
 
 // image for the logo
 import Logo from '../../assets/logo.png'
 
 // icons
-import { MdSpaceDashboard, MdEmojiPeople } from 'react-icons/md'
+import { MdSpaceDashboard } from 'react-icons/md'
 import { RiLogoutBoxRFill, RiHome4Fill } from 'react-icons/ri'
 import { IoSettingsSharp } from 'react-icons/io5'
 import { IoIosHelpCircle } from 'react-icons/io'
@@ -43,8 +44,6 @@ const LeftNave = () => {
   const classes = useStyles()
 
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('minaDoc-app')))
-
-  let { patients } = useSelector((state) => state.patients)
   
   const doc = user.result
 
@@ -61,6 +60,7 @@ const LeftNave = () => {
     setOpen(!open)
   }
 
+  const { t } = useTranslation()
   return (
     <>
         <Grid className={`${classes.menubtn} ${classes.hidemenubtn}`} onClick={handleMenu}>
@@ -112,31 +112,31 @@ const LeftNave = () => {
             <Link style={{ textDecoration: 'none' }} to='/home'>
             <div className={classes.links}>
               <RiHome4Fill size='25' />
-              <Typography className={classes.item} variant='body1'>Home</Typography>
+              <Typography className={classes.item} variant='body1'>{t('LeftNav.1')}</Typography>
             </div>
             </Link>
             <Link style={{ textDecoration: 'none' }} to='/dashboard'>
             <div className={classes.links}>
               <MdSpaceDashboard size='25' />
-              <Typography className={classes.item} variant='body1'>Dashboard</Typography>
+              <Typography className={classes.item} variant='body1'>{t('LeftNav.2')}</Typography>
             </div>
             </Link>
             <Link style={{ textDecoration: 'none' }} to='/settings'>
             <div className={classes.links}>
               <IoSettingsSharp size='25' />
-              <Typography className={classes.item} variant='body1'>Settings</Typography>
+              <Typography className={classes.item} variant='body1'>{t('LeftNav.3')}</Typography>
             </div>
             </Link>
             <Link style={{ textDecoration: 'none' }} to='/help'>
             <div className={classes.links}>
               <IoIosHelpCircle size='25' />
-              <Typography className={classes.item} variant='body1'>Help</Typography>
+              <Typography className={classes.item} variant='body1'>{t('LeftNav.4')}</Typography>
             </div>
             </Link>
             <Link style={{ textDecoration: 'none' }} to='/'>
             <div className={classes.links} onClick={logout}>
               <RiLogoutBoxRFill size='25' />
-              <Typography className={classes.item} variant='body1'>Logout</Typography>
+              <Typography className={classes.item} variant='body1'>{t('LeftNav.5')}</Typography>
             </div>
             </Link>
           </Grid>

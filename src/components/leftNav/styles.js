@@ -13,7 +13,7 @@ export default makeStyles((theme) => ({
         height: '100vh',
         zIndex: '30',
         backgroundColor: '#3be993',
-        animation: `$slowEffect 1000ms ${theme.transitions.easing.easeOut}`,
+        animation: `$slowEffect 500ms ${theme.transitions.easing.easeOut}`,
         '@media (orientation: landscape)': {
             height: 'auto',
         },

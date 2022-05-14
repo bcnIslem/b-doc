@@ -1,5 +1,7 @@
 
-import React from 'react'
+// hooks
+import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 // material ui components
 import { Button, Menu, MenuItem, Fade  } from '@material-ui/core'
 
@@ -7,13 +9,21 @@ import { Button, Menu, MenuItem, Fade  } from '@material-ui/core'
 import useStyles from './styles'
 
 const Language = () => {
+
     const [anchorEl, setAnchorEl] = React.useState(null);
+
     const open = Boolean(anchorEl);
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    const handleClose = () => {
+
+    const [lang, setLang] = useState('en')
+    const { t, i18n } = useTranslation()
+    const handleClose = (prop) => {
         setAnchorEl(null);
+        setLang(prop)
+        i18n.changeLanguage(prop)
     };
 
     const classes = useStyles()
@@ -28,7 +38,7 @@ const Language = () => {
             aria-expanded={open ? 'true' : undefined}
             onClick={handleClick}
         >
-            Languages
+            {t('Language.1')}
         </Button>
         <Menu
             className={classes.menu}
@@ -41,8 +51,8 @@ const Language = () => {
             onClose={handleClose}
             TransitionComponent={Fade}
         >
-            <MenuItem onClick={handleClose}>Eng</MenuItem>
-            <MenuItem onClick={handleClose}>Fr</MenuItem>
+            <MenuItem onClick={() => handleClose('en')}>En</MenuItem>
+            <MenuItem onClick={() => handleClose('fr')}>Fr</MenuItem>
         </Menu>
         </div>
     )

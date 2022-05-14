@@ -167,7 +167,7 @@ export default makeStyles((theme) => ({
         },
     },
     color:{
-        width: '60%',
+        width: '90%',
         display: 'flex',
         justifyContent: 'space-around'
     },
