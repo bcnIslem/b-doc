@@ -2,10 +2,10 @@
 // hooks
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 // material ui components
-import { Button, Container, Grid, Paper, Typography } from '@material-ui/core'
+import { Button, Container, Grid, Typography } from '@material-ui/core'
 
 // icons
 import { MdOutlineMedication } from 'react-icons/md'
