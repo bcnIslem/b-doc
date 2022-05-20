@@ -1,7 +1,7 @@
 
 // testing purposes
 import { useAppDispatch, useAppSelector } from '../../redux/redux-hooks'
-
+import { Navigate, useNavigate } from "react-router-dom";
 //hooks!
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -23,6 +23,7 @@ export const Header = () => {
 
     const dispatch = useAppDispatch()
     const classes = useStyles()
+    let navigate = useNavigate();
 
     const patientToUpdate = useAppSelector((state) => state.patients.patientToUpdate)
     
@@ -33,7 +34,7 @@ export const Header = () => {
 
     return (
         <Paper className={classes.paper} elevation={3} title='header'>
-            <Button className={classes.arrow} component={Link} to='/dashboard' title='arrow'><BsFillArrowLeftSquareFill size='30' /></Button>
+            <Button className={classes.arrow} onClick={() => navigate(-1)} title='arrow'><BsFillArrowLeftSquareFill size='30' /></Button>
             <Typography className={classes.title} variant="h4" title='drName'>Dr. {doctor.firstName.toUpperCase()} {doctor.lastName}</Typography>
             <div className={classes.actions} title='actions'>
                 <Button 

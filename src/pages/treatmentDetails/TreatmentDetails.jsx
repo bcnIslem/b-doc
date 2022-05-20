@@ -2,7 +2,7 @@
 // hooks
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 // material ui components
 import { Button, Container, Grid, Paper, Typography } from '@material-ui/core'
@@ -31,11 +31,12 @@ const TreatmentDetails = () => {
         console.log('m: ', med.rules)
     })
     const classes = useStyles()
+    const navigate = useNavigate()
 
     return (
         <Container>
         <Grid className={classes.top}>
-            <Grid component={Link} to='/dashboard' className={classes.back}>
+            <Grid onClick={() => navigate(-1)} className={classes.back}>
                     <BsFillArrowLeftSquareFill size='35' color='#3be993' />
             </Grid>
             <Button onClick={handlePrint} className={classes.btn}>Print</Button>
