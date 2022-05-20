@@ -18,7 +18,7 @@ import CheckUpComponent from "./CheckUpComponent"
 
 // actions
 import { getPatient, patientToCheckUp, patientToAddTreatment } from "../../actions/patient"
-import { getAllCheckUps } from "../../actions/checkUp"
+import { getAllCheckUps, gotoC } from "../../actions/checkUp"
 
 // styles
 import useStyles from './styles'
@@ -117,7 +117,7 @@ const Patient = () => {
                                         return null
                                         } else {
                                             return (
-                                            <Paper className={classes.chechup} elevation={6} key={checkUp._id}>
+                                            <Paper className={classes.chechup} elevation={6} key={checkUp._id} onClick={() => dispatch(gotoC(checkUp, navigate))}>
                                                 <CheckUpComponent item={checkUp} key={checkUp._id} />
                                             </Paper>
                                             )

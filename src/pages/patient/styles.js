@@ -57,6 +57,7 @@ export default makeStyles((theme) => ({
     chechup: {
         marginTop: '10px',
         padding: '10px',
+        cursor: 'pointer'
     },
     treatment: {
         marginTop: '10px',

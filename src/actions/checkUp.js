@@ -85,7 +85,7 @@ export const deleteCheckUp = (id) => async (dispatch) => {
 }
 
 // get by id
-export const goto = (chechUp, router) => async (dispatch) => {
+export const gotoC = (chechUp, router) => async (dispatch) => {
     try {
         dispatch({ type: CHECKUP_TO_PRINT, payload: chechUp })
 
