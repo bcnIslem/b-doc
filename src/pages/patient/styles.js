@@ -36,7 +36,7 @@ export default makeStyles((theme) => ({
         color: 'white',
         backgroundColor: '#33A6FF',
         boxShadow: '2px 2px 6px gray',
-        width: '160px',
+        width: '200px',
         padding: '8px 20px',
         '&:hover': {
             color: "black",
@@ -47,11 +47,11 @@ export default makeStyles((theme) => ({
     content:{
         margin: '20px 0px',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
     },
     table: {
-        margin: '30px',
-        width: '200px',
+        margin: '30px 20px',
+        width: '40%',
         textAlign: 'center',
     },
     chechup: {
@@ -86,6 +86,10 @@ export default makeStyles((theme) => ({
         btn: {
             margin: '10px 0px',
             width: '90%',
+        },
+        table: {
+            margin: '30px 0px',
+            width: '45%',
         },
     },
 }));

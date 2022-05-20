@@ -16,7 +16,7 @@ const store = createStore(reducers, {}, composeWithDevTools(applyMiddleware(thun
 
 ReactDOM.render(
     <Provider store={store}>
-        <Suspense fallback={(<div>Loading...</div>)}>
+        <Suspense fallback={(<div></div>)}>
             <App />
         </Suspense>
     </Provider>,

@@ -46,7 +46,7 @@ const Patient = ({ item }) => {
                 <Typography>{item.phone}</Typography>
             </Grid>
             <Grid className={`${classes.grid} ${classes.hide}`}>
-                <Typography>{moment(item.yearOfBirth).format('YYYY-MM-DD')}</Typography>
+                <Typography>{item.age}</Typography>
             </Grid>
             <Grid className={`${classes.grid} ${classes.hide}`}>
                 <Typography>{item.sex}</Typography>

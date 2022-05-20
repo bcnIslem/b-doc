@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 // components
 import Header from '../../components/header/Header'
@@ -26,6 +27,7 @@ const AddTreatment = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const classes = useStyles()
+    const { t } = useTranslation()
 
     // medications rules
     const [rulesData, setRulesData] = useState([
@@ -166,7 +168,7 @@ const AddTreatment = () => {
             <Header />
             <Paper className={classes.paper} elevation={3}>
                 <form autoComplete='off' noValidate className={classes.form} onSubmit={handleSubmit}>
-                    <Typography variant='h3' className={classes.title}>Add Treatment</Typography> 
+                    <Typography variant='h3' className={classes.title}>{t('PatientDetails.2')}</Typography> 
                     <Typography variant='h4'>{patientToAddTreatment.fullName}</Typography> 
 
                     <TimeLineComponent data={timeLineMed} />
@@ -179,7 +181,7 @@ const AddTreatment = () => {
                                         name='name'
                                         variant='outlined'
                                         fullWidth
-                                        label='medication Name'
+                                        label={t('Treatments.5')}
                                         value={medication.name}
                                         onChange={e => handleMedicationsInput(index, e)}
                                     />
@@ -192,7 +194,7 @@ const AddTreatment = () => {
                                                 <TextField className={classes.textfield}
                                                     name='rule'
                                                     variant='filled'
-                                                    label='medication rule'
+                                                    label={t('Treatments.6')}
                                                     value={ruledata.rule}
                                                     onChange={e => handleRulesInput(medication.name, ind, e)}
                                                 />
@@ -217,8 +219,8 @@ const AddTreatment = () => {
                         ))
                     }
                     <Grid className={classes.actions}>
-                        <Button type='submit' className={classes.next} variant='contained' size='large' fullWidth onClick={prepareState}>Add Medication</Button>
-                        <Button type='submit' className={classes.btnSubmit} variant='contained' size='large' fullWidth>Add Treatment</Button>
+                        <Button type='submit' className={classes.next} variant='contained' size='large' fullWidth onClick={prepareState}>{t('Treatments.7')}</Button>
+                        <Button type='submit' className={classes.btnSubmit} variant='contained' size='large' fullWidth>{t('PatientDetails.2')}</Button>
                     </Grid>
                 </form>
             </Paper>

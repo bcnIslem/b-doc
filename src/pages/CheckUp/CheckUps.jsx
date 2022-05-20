@@ -2,6 +2,7 @@
 // hooks
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 
 // material ui components
@@ -9,7 +10,6 @@ import { Container, Grid, Typography, Paper } from '@material-ui/core'
 
 // components
 import Header from '../../components/header/Header'
-import LeftNave from '../../components/leftNav/LeftNave'
 import CheckUp from '../../components/checkup/CheckUp'
 import Loading from '../../components/loading/Loading'
 
@@ -32,6 +32,8 @@ const CheckUps = () => {
     useEffect(() => {
         dispatch(getAllCheckUps())
     }, [checkUps, dispatch])
+
+    const { t } = useTranslation()
     
     return (
         <div className={classes.main}>
@@ -40,10 +42,10 @@ const CheckUps = () => {
                 <Paper className={classes.paper} elevation={3}>
                 <div className={classes.open}>
                 <Grid className={classes.grid}>
-                    <Typography variant='h6'>Full Name</Typography>
+                    <Typography variant='h6'>{t('Treatments.1')}</Typography>
                 </Grid>
                 <Grid className={`${classes.gridtests} ${classes.hide}`}>
-                    <Typography variant='h6'>Tests</Typography>
+                    <Typography variant='h6'>{t('CheckUps.2')}</Typography>
                 </Grid>
                 </div>
                 <div className={classes.actions}>

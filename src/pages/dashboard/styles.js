@@ -231,7 +231,7 @@ export default makeStyles((theme) => ({
 
     [theme.breakpoints.down('sm')]: {
         topPaper: { 
-            width: '32%',
+            //width: '32%',
             marginBottom: '20px'
         },
     },
@@ -248,9 +248,15 @@ export default makeStyles((theme) => ({
             },
         },
         topPaper: { 
-            width: '55vw !important',
-            padding: '2px 30px',
+            width: '55% !important',
+            padding: '2px 0px',
             margin: '0px 20px 20px 0px'
+        },
+        grid: { 
+            marginLeft: '30px',
+        },
+        gridtitle: { 
+            width: '40vw',
         },
     },
 }))

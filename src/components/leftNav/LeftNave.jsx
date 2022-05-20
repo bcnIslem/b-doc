@@ -13,7 +13,7 @@ import { LOGOUT } from '../../constants/actiontypes.js'
 import { Grid, Paper, Typography } from '@material-ui/core'
 
 // image for the logo
-import Logo from '../../assets/logo.png'
+import ProDoc from '../../assets/ProDoc.jpg'
 
 // icons
 import { MdSpaceDashboard } from 'react-icons/md'
@@ -73,7 +73,7 @@ const LeftNave = () => {
 
               <Grid item className={classes.gridOne}>
                 <Link to='/'>
-                  <img src={Logo} alt='logo of the doc app' width='40px' height='40px' />
+                  <img src={ProDoc} style={{ borderRadius: '10px', boxShadow: '2px 2px 6px black' }} alt='ProDoc Logo' width='40px' height='40px' />
                 </Link>
               </Grid>
               <Typography className={classes.typo} variant='h6'>DocApp</Typography>

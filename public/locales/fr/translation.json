@@ -27,8 +27,43 @@
     "Home": {
         "1": "Nom et Prenom",
         "2": "Telephone",
-        "3": "Naissance",
-        "4": "Le Sexe",
+        "3": "Age",
+        "4": "Sexe",
         "5": "Description"
+    },
+    "Treatments": {
+        "1": "Nom et Prenom",
+        "2": "Cree le",
+        "3": "Medicaments",
+        "4": "Medicaments ajoutes",
+        "5": "Nom de Medicament",
+        "6": "Regle de Medicament",
+        "7": "Ajouter Medicament"
+    },
+    "CheckUps": {
+        "2": "Les Tests"
+    },
+    "Settings": {
+        "1": "Nom",
+        "2": "Question de Securite",
+        "3": "Mot de Passe"
+    },
+    "Form": {
+        "1": "Modifier",
+        "2": "Ajouter Patient",
+        "3": "Nom et Prenom *",
+        "4": "Sexe *",
+        "5": "Description *"
+    },
+    "Help": {
+        "1": "Contactes-nous pour obtenir de l'aide ou une mise a jour!"
+    },
+    "PatientDetails": {
+        "1": "ajouter belan",
+        "2": "ajoute ordannance",
+        "3": "Cree le",
+        "4": "Derniere visite",
+        "5": "Bilans",
+        "6": "Ordonnances"
     }
 }

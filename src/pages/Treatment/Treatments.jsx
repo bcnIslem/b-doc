@@ -2,6 +2,7 @@
 // hooks
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 // material ui components
 import { Container, Grid, Typography, Paper } from '@material-ui/core'
@@ -31,6 +32,9 @@ const Treatments = () => {
     useEffect(() => {
         dispatch(getAllTreatments())
     }, [treatments, dispatch])
+
+    const { t } = useTranslation()
+    
     return (
         <div className={classes.main}>
             <Container className={classes.Container}>
@@ -38,13 +42,13 @@ const Treatments = () => {
                 <Paper className={classes.paper} elevation={3}>
                 <div className={classes.open}>
                 <Grid className={classes.grid}>
-                    <Typography variant='h6'>Full Name</Typography>
+                    <Typography variant='h6'>{t('Treatments.1')}</Typography>
                 </Grid>
                 <Grid className={`${classes.grid} ${classes.hide}`}>
-                    <Typography variant='h6'>Created Date</Typography>
+                    <Typography variant='h6'>{t('Treatments.2')}</Typography>
                 </Grid>
                 <Grid className={`${classes.gridtests} ${classes.hide}`}>
-                    <Typography variant='h6'>Medications</Typography>
+                    <Typography variant='h6'>{t('Treatments.3')}</Typography>
                 </Grid>
                 </div>
                 <div className={classes.actions}>

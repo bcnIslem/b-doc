@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 // actions
 import { addCheckUp } from '../../actions/checkUp'
@@ -22,6 +23,7 @@ const AddCheckUp = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
+    const { t } = useTranslation()
     const classes = useStyles()
 
     const patientToCheckUp = useSelector((state) => state.patients.patientToAddCheckUp)
@@ -47,7 +49,7 @@ const AddCheckUp = () => {
             <Header />
             <Paper className={classes.paper} elevation={3}>
                 <form autoComplete='off' noValidate className={classes.form} onSubmit={handleSubmit}>
-                    <Typography variant='h3' className={classes.title}>Add Check-up</Typography>
+                    <Typography variant='h3' className={classes.title}>{t('PatientDetails.1')}</Typography>
                     <Typography variant='h4' >{patientToCheckUp.fullName}</Typography>
                     <TextField className={classes.textfield}
                     name='tests' 
@@ -56,7 +58,7 @@ const AddCheckUp = () => {
                     fullWidth 
                     value={checkUpData.tests} 
                     onChange={(e) => setCheckUpData({ ...checkUpData, tests: e.target.value.split(',') })} />
-                    <Button type="submit" className={classes.btnSubmit} variant='contained' size='large'fullWidth>Add Check-up</Button>
+                    <Button type="submit" className={classes.btnSubmit} variant='contained' size='large'fullWidth>{t('PatientDetails.1')}</Button>
                 </form>
             </Paper>
         </Container>

@@ -134,7 +134,7 @@ export const patientToUpdated = (item, router) => async (dispatch, getState) => 
             patientId: item._id,
             fullName: item.fullName,
             phone: item.phone,
-            yearOfBirth: moment(item.yearOfBirth).format('YYYY-MM-DD'),
+            age: item.age,
             sex: item.sex,
             description: item.description,
         }

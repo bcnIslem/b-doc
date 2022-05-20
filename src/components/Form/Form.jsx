@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 // actions
 import { addPatient, updatedPatient, endPatientToUpdate } from '../../actions/patient'
@@ -23,7 +24,7 @@ const Form = () => {
   const [patientData, setPatientData] = useState({
     fullName: '', 
     phone: '', 
-    yearOfBirth: '', 
+    age: '', 
     sex: '', 
     description: ''
   })
@@ -39,7 +40,7 @@ const Form = () => {
     setPatientData({
       fullName: '', 
       phone: '', 
-      yearOfBirth: '', 
+      age: '', 
       sex: '', 
       description: ''
     })
@@ -70,7 +71,7 @@ const Form = () => {
       setPatientData({
         fullName: '', 
         phone: '', 
-        yearOfBirth: '', 
+        age: '', 
         sex: '', 
         description: ''
       })
@@ -80,48 +81,50 @@ const Form = () => {
     }
   },[patientToUpdate])
 
+  const { t } = useTranslation()
+
   return (
     <Paper className={classes.paper} elevation={3}>
       <form autoComplete='off' noValidate className={classes.form} onSubmit={handleSubmit} title="form">
-        <Typography variant='h6' className={classes.title}>{patientToUpdate ? `Updating "${patientToUpdate.fullName}"`: 'Add Patient'}</Typography>
+        <Typography variant='h6' className={classes.title}>{patientToUpdate ? `${t('Form.1')} "${patientToUpdate.fullName}"`: `${t('Form.2')}`}</Typography>
         <TextField className={classes.textfield}
         name='fullName' 
         variant='outlined' 
-        label='Full Name'
+        label={t('Form.3')}
         fullWidth 
         value={patientData.fullName} 
         onChange={(e) => setPatientData({ ...patientData, fullName: e.target.value })} />
         <TextField className={classes.textfield}
         name='phone' 
         variant='outlined' 
-        label='Phone' 
+        label={t('Home.2')}
         fullWidth 
         value={patientData.phone} 
         onChange={(e) => setPatientData({ ...patientData, phone: e.target.value })} />
         <TextField className={classes.textfield}
-        name='yearOfBirth' 
+        name='age' 
         variant='outlined' 
-        label='Year Of Birth [2022-04-22]'
+        label='age'
         fullWidth 
-        value={patientData.yearOfBirth} 
-        onChange={(e) => setPatientData({ ...patientData, yearOfBirth: e.target.value })} />
+        value={patientData.age} 
+        onChange={(e) => setPatientData({ ...patientData, age: e.target.value })} />
         <TextField className={classes.textfield}
         name='sex' 
         variant='outlined' 
-        label='Sex' 
+        label={t('Form.4')}
         fullWidth 
         value={patientData.sex} 
         onChange={(e) => setPatientData({ ...patientData, sex: e.target.value })} />
         <TextField className={classes.textfield}
         name='description' 
         variant='outlined' 
-        label='Description'
+        label={t('Form.5')}
         multiline
         rows={3}
         fullWidth 
         value={patientData.description} 
         onChange={(e) => setPatientData({ ...patientData, description: e.target.value })} />
-        <Button type="submit" className={classes.btnSubmit} variant='contained' size='large'fullWidth>{patientToUpdate ? `Update Patient`: 'Add Patient'}</Button>
+        <Button type="submit" className={classes.btnSubmit} variant='contained' size='large'fullWidth>{patientToUpdate ? `${t('Form.1')} Patient`: `${t('Form.2')}`}</Button>
         <Button variant='contained' className={classes.btnClear} size='small' fullWidth onClick={clear}>Clear</Button>
       </form>
     </Paper>

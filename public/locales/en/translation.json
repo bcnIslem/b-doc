@@ -27,8 +27,43 @@
     "Home": {
         "1": "Full Name",
         "2": "Phone",
-        "3": "Year of Birth",
+        "3": "Age",
         "4": "Sex",
         "5": "Description"
+    },
+    "Treatments": {
+        "1": "Full Name",
+        "2": "Created Date",
+        "3": "Medications",
+        "4": "Medications Added",
+        "5": "Medication Name",
+        "6": "Medication rule",
+        "7": "Add Medication"
+    },
+    "CheckUps": {
+        "2": "Tests"
+    },
+    "Settings": {
+        "1": "Name",
+        "2": "Security Question",
+        "3": "Password"
+    },
+    "Form": {
+        "1": "Updating",
+        "2": "Add Patient",
+        "3": "Full Name *",
+        "4": "Sex *",
+        "5": "Description *"
+    },
+    "Help": {
+        "1": "get in touch for help or update!"
+    },
+    "PatientDetails": {
+        "1": "Add Check-Up",
+        "2": "Add Treatment",
+        "3": "Added",
+        "4": "Last visit",
+        "5": "Check-Ups",
+        "6": "Treatments"
     }
 }

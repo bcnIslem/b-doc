@@ -1,9 +1,10 @@
 
 // hooks
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 // material ui component
-import { Container, Paper, Grid, Typography } from '@material-ui/core'
+import { Container, Grid, Typography } from '@material-ui/core'
 
 // icons
 import { BsInstagram, BsFillArrowLeftSquareFill } from 'react-icons/bs'
@@ -14,6 +15,8 @@ import useStyles from './styles'
 
 const Help = () => {
     const classes = useStyles()
+
+    const { t } = useTranslation()
     return (
         <Container >
         <Grid component={Link} to='/dashboard' className={classes.back}>
@@ -21,7 +24,7 @@ const Help = () => {
         </Grid>
         <Container className={classes.main}>
             <Grid className={classes.container}>
-                <Typography className={classes.title} variant='body1'>get in touch for help or update!</Typography>
+                <Typography className={classes.title} variant='body1'>{t('Help.1')}</Typography>
                 <Grid className={classes.socialmedia}>
                         <a style={{ textDecoration: 'none' }} href='mailto:islemwilcher8@gmail.com'><AiOutlineMail size='45' color='#1ec9ff' /></a>
                         <a style={{ textDecoration: 'none' }} href='https://www.instagram.com/coding.islem/' target='_blank' rel="noreferrer"><BsInstagram  size='45' color='#c3207e' /></a>

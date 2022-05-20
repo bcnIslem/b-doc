@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 // material ui components
 import { Grid, Paper, TextField, Typography, Button, FormControl, InputLabel, OutlinedInput, IconButton, InputAdornment, Container } from '@material-ui/core'
@@ -139,6 +140,8 @@ const Settings = () => {
 
     }
 
+    const { t } = useTranslation()
+
     return (
         <Container className={classes.main}>
                 <Grid component={Link} to='/dashboard' className={classes.back}>
@@ -149,7 +152,7 @@ const Settings = () => {
                 <Paper className={classes.name} elevation={3}>
                     <form  autoComplete='off' noValidate className={classes.form} onSubmit={handleNameSubmit}>
 
-                    <Typography variant='h5' >Name</Typography>
+                    <Typography variant='h5' >{t('Settings.1')}</Typography>
                     <TextField className={classes.textfield}
                         name='firstName' 
                         variant='outlined' 
@@ -181,7 +184,7 @@ const Settings = () => {
                 <Paper className={classes.name} elevation={3}>
                     <form  autoComplete='off' noValidate className={classes.form} onSubmit={handleSecuritySubmit}>
 
-                    <Typography variant='h5' >Security Question</Typography>
+                    <Typography variant='h5' >{t('Settings.2')}</Typography>
 
                     <FormControl className={classes.textfield} fullWidth variant="outlined">
                         <InputLabel htmlFor="outlined-adornment-password">Security Question</InputLabel>
@@ -238,7 +241,7 @@ const Settings = () => {
                 <Paper className={classes.name} elevation={3}>
                     <form autoComplete='off' noValidate className={classes.form} onSubmit={handlePasswordSubmit}>
 
-                    <Typography variant='h5' >Password</Typography>
+                    <Typography variant='h5' >{t('Settings.3')}</Typography>
                     
                     <FormControl className={classes.textfield} fullWidth variant="outlined">
                         <InputLabel htmlFor="outlined-adornment-password">Current Password</InputLabel>
