@@ -1,5 +1,5 @@
 
-import { START_LOADING, END_LOADING, FETCH_ALL_CHECKUPS, FETCH_CHECKUP, CREATE_C, UPDATE_C, DELETE_C } from '../constants/actiontypes.js'
+import { START_LOADING, END_LOADING, FETCH_ALL_CHECKUPS, FETCH_CHECKUP, CREATE_C, UPDATE_C, DELETE_C, CHECKUP_TO_PRINT } from '../constants/actiontypes.js'
 
 import * as api from '../api/index.js'
 
@@ -81,5 +81,16 @@ export const deleteCheckUp = (id) => async (dispatch) => {
         notifyDelete();
     } catch (error) {
         notifyError(error);
+    }
+}
+
+// get by id
+export const goto = (chechUp, router) => async (dispatch) => {
+    try {
+        dispatch({ type: CHECKUP_TO_PRINT, payload: chechUp })
+
+        router(`/home/checkUp-details`)
+    } catch (error) {
+        notifyError(error)
     }
 }

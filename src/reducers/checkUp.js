@@ -1,7 +1,7 @@
 
-import { START_LOADING, END_LOADING, FETCH_ALL_CHECKUPS, FETCH_CHECKUP, CREATE_C, UPDATE_C, DELETE_C } from '../constants/actiontypes.js'
+import { START_LOADING, END_LOADING, FETCH_ALL_CHECKUPS, FETCH_CHECKUP, CREATE_C, UPDATE_C, DELETE_C, CHECKUP_TO_PRINT } from '../constants/actiontypes.js'
 
-const checkUpsReducers = (state = { isLoading: true, checkUps: []}, action) => {
+const checkUpsReducers = (state = { isLoading: true, checkUps: [], checkUpToPrint: []}, action) => {
     switch(action.type) {
         case START_LOADING:
             return { ...state, isLoading: true };
@@ -11,6 +11,8 @@ const checkUpsReducers = (state = { isLoading: true, checkUps: []}, action) => {
             return { ...state, checkUps: action.payload };
         case FETCH_CHECKUP:
             return { ...state, checkUp: action.payload.checkUp };
+        case CHECKUP_TO_PRINT:
+            return { ...state, checkUpToPrint: action.payload };
         case CREATE_C:
             return { ...state, checkUps: [ ...state.checkUps, action.payload ] };
         case UPDATE_C:

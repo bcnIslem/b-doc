@@ -38,6 +38,8 @@ export const CREATE_C = 'CREATE_C'
 export const UPDATE_C = 'UPDATE_C'
 export const DELETE_C = 'DELETE_C'
 
+export const CHECKUP_TO_PRINT = 'CHECKUP_TO_PRINT'
+
 // treatments
 export const FETCH_ALL_TREATMENTS = 'FETCH_ALL_TREATMENTS'
 export const FETCH_TREATMENT = 'FETCH_TREATMENT'

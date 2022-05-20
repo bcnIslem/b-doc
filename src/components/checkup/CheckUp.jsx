@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 // actions
-import { deleteCheckUp } from '../../actions/checkUp'
+import { deleteCheckUp, goto } from '../../actions/checkUp'
 
 // icons
 import { AiFillDelete } from 'react-icons/ai'
@@ -21,18 +21,19 @@ const CheckUp = ({ item }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     
-    const openCheckUp = () => {
-        navigate(`/home/patients/${item.patientId}`)
-    }
+    // const openCheckUp = () => {
+    //     navigate(`/home/patients/${item.patientId}`)
+    // }
 
     const deleteC = (id) => {
         dispatch(deleteCheckUp(id))
     }
+    
 
     const classes = useStyles()
     return (
         <Paper className={classes.paper}>
-        <div  className={classes.open} onClick={openCheckUp}>
+        <div  className={classes.open} onClick={() => dispatch(goto(item, navigate))}>
         <Grid className={classes.grid}>
             <Typography>{item.patientFullName}</Typography>
         </Grid>

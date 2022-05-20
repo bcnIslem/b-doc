@@ -21,6 +21,7 @@ import Treatments from './pages/Treatment/Treatments'
 import Settings from './pages/settings/Settings'
 import TreatmentDetails from './pages/treatmentDetails/TreatmentDetails'
 import Help from './pages/help/Help'
+import CheckUpDetails from './pages/checkUpDetails/CheckUpDetails'
 
 const App = () => {
 
@@ -54,6 +55,9 @@ const App = () => {
                     </Route>
                     <Route path='/home/check-ups' element={<ProtectedRoute />}>
                         <Route exact path='/home/check-ups' element={<CheckUps />} />
+                    </Route>
+                    <Route path='/home/checkUp-details' element={<ProtectedRoute />}>
+                        <Route exact path='/home/checkUp-details' element={<CheckUpDetails />} />
                     </Route>
 
                     <Route path='/home/patients/add/treatment' element={<ProtectedRoute />}>

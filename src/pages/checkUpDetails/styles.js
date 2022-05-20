@@ -39,18 +39,7 @@ export default makeStyles((theme) => ({
         width: '80%',
         margin: '30px 0px 0px auto'
     },
-    medName: {
-        display: 'flex',
-        alignItems: 'center'
-    },
-    medications: {
-    },
-    rules: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        width: '100%'
-    },
+
 
     [theme.breakpoints.down('sm')]: {
 
