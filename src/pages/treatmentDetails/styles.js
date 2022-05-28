@@ -41,7 +41,11 @@ export default makeStyles((theme) => ({
     },
     medName: {
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        fontWeight: '600'
+    },
+    ruleName: {
+        fontWeight: '500'
     },
     medications: {
     },

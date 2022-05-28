@@ -54,7 +54,7 @@ const Auth = () => {
         bg: {
             backgroundImage: `url(${BGI})`,
             backgroundSize: 'cover',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            backgroundColor: 'rgba(0,0, 0, 0.5)',
             backgroundBlendMode: 'darken'
         }
     };

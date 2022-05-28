@@ -45,13 +45,13 @@ const TreatmentDetails = () => {
                 {treatmentToPrint.medications.map(medication => (
 
                     <Grid className={classes.lign} key={medication.name}>
-                        <Typography className={classes.medName} variant='h5' ><MdOutlineMedication /> {medication.name}</Typography>
+                        <Typography className={classes.medName} variant='body1' ><MdOutlineMedication /> {medication.name}</Typography>
 
                         <Grid className={classes.rules}>
                             {medication.rules.map(m => (
                                 <Grid key={m.rule}>
                                     {medication.name === m.ruleId 
-                                    ? <Typography variant='h6' >•{m.rule}</Typography>
+                                    ? <Typography  className={classes.ruleName} variant='body2' >•{m.rule}</Typography>
                                     : ''
                                     }
                                 </Grid>

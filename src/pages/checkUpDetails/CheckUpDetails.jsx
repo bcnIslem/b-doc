@@ -44,7 +44,7 @@ const CheckUpDetails = () => {
             <Grid className={classes.medications}>
                 {checkUpToPrint.tests.map(test => (
                     <Grid className={classes.lign} key={test}>
-                        <Typography className={classes.medName} variant='h5' >•{test}</Typography>
+                        <Typography className={classes.medName} variant='body1' >•{test}</Typography>
                     </Grid>
                 )
                 )}

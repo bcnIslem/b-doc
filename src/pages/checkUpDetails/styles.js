@@ -39,6 +39,9 @@ export default makeStyles((theme) => ({
         width: '80%',
         margin: '30px 0px 0px auto'
     },
+    medName: {
+        fontWeight: '500'
+    },
 
 
     [theme.breakpoints.down('sm')]: {
