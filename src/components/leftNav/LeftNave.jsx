@@ -76,7 +76,7 @@ const LeftNave = () => {
                   <img src={ProDoc} style={{ borderRadius: '10px', boxShadow: '2px 2px 6px black' }} alt='ProDoc Logo' width='40px' height='40px' />
                 </Link>
               </Grid>
-              <Typography className={classes.typo} variant='h6'>DocApp</Typography>
+              <Typography className={classes.typo} variant='h6'>ProDoc</Typography>
 
             </Grid>
 
