@@ -69,3 +69,22 @@ export const fetchTreatment = (id) => API.get(`/treatments/${id}`)
 export const createTreatment = (treatment) => API.post('/treatments', treatment)
 export const updateTreatment = (id, treatment) => API.patch(`/treatments/${id}`, treatment)
 export const deleteTreatment = (id) => API.delete(`/treatments/${id}`)
+
+//####################################################################################################################################################
+
+// Medical Folders
+
+// add medical folder to a patient
+export const addMedicalFolder = () => API.post('/medical-folders')
+
+// patient all medical folders
+export const getPatientMedicalFolders = (id) => API.get('/medical-folders/patient', id)
+
+// get folder by id
+export const getFolder = (id) => API.get('/medical-folders/folder', id)
+
+// update folder
+export const updateMedicalFolder = (id, folder) => API.patch(`/medical-folders/${id}`, folder)
+
+// delete folder
+export const deleteMedicalFolder = (id) => API.delete(`/medical-folders/${id}`)
