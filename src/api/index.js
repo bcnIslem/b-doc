@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const API = axios.create({ baseURL: 'https://mina-doc.herokuapp.com/api' })
+//const API = axios.create({ baseURL: 'http://localhost:8001/api' })
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('minaDoc-app')) {
@@ -75,7 +76,7 @@ export const deleteTreatment = (id) => API.delete(`/treatments/${id}`)
 // Medical Folders
 
 // add medical folder to a patient
-export const addMedicalFolder = () => API.post('/medical-folders')
+export const addMedicalFolder = (folder) => API.post('/medical-folders', folder)
 
 // patient all medical folders
 export const getPatientMedicalFolders = (id) => API.get(`/medical-folders/patient/${id}`)
