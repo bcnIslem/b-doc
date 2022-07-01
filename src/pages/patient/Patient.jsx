@@ -17,8 +17,9 @@ import TreatmentComponent from "./TreatmentComponent"
 import CheckUpComponent from "./CheckUpComponent"
 
 // actions
-import { getPatient, patientToCheckUp, patientToAddTreatment } from "../../actions/patient"
+import { getPatient, patientToCheckUp, patientToAddTreatment, patientToAddMedicalFolder } from "../../actions/patient"
 import { getAllCheckUps, gotoC } from "../../actions/checkUp"
+
 
 // styles
 import useStyles from './styles'
@@ -61,12 +62,16 @@ const Patient = () => {
     const handleAddTreatment = () => {
         dispatch(patientToAddTreatment(patient, navigate))
     }
+    const handleAddMedicalFolder = () => {
+        dispatch(patientToAddMedicalFolder(patient, navigate))
+    }
 
     return (
         <Container title='patientPage'>
             <Header />
 
             <Paper className={classes.btnPaper}>
+                <Button size='small' className={classes.btn} onClick={handleAddMedicalFolder} >{t('PatientDetails.7')}</Button>
                 <Button size='small' className={classes.btn} onClick={handleAddCheckUp} >{t('PatientDetails.1')}</Button>
                 <Button size='small' className={classes.btn} onClick={handleAddTreatment}>{t('PatientDetails.2')}</Button>
             </Paper>
