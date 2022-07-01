@@ -1,7 +1,7 @@
 
-import { START_LOADING, END_LOADING, FETCH_ALL, FETCH_PATIENT, FETCH_BY_SEARCH, FETCH_TO_UPDATE_PATIENT, END_PATIENT_TO_UPDATE, CREATE_P, UPDATE_P, DELETE_P, FETCH_TO_ADD_CHECKUP, END_ADD_CHECKUP, FETCH_TO_ADD_TREATMENT, END_ADD_TREATMENT, FETCH_STATISTIC } from '../constants/actiontypes.js'
+import { START_LOADING, END_LOADING, FETCH_ALL, FETCH_PATIENT, FETCH_BY_SEARCH, FETCH_TO_UPDATE_PATIENT, END_PATIENT_TO_UPDATE, CREATE_P, UPDATE_P, DELETE_P, FETCH_TO_ADD_CHECKUP, END_ADD_CHECKUP, FETCH_TO_ADD_TREATMENT, END_ADD_TREATMENT, FETCH_STATISTIC, END_ADD_MEDICAL_FOLDER, FETCH_TO_ADD_MEDICAL_FOLDER } from '../constants/actiontypes.js'
 
-const patientsReducers = (state = { isLoading: true, patients: [], patientToUpdate: [], patientToAddCheckUp: [], patientToAddTreatment: [], statistic: [] }, action) => {
+const patientsReducers = (state = { isLoading: true, patients: [], patientToUpdate: [], patientToAddCheckUp: [], patientToAddTreatment: [], statistic: [], patientToAddMedicalFolder: [] }, action) => {
     switch(action.type) {
         case START_LOADING:
             return { ...state, isLoading: true };
@@ -21,12 +21,16 @@ const patientsReducers = (state = { isLoading: true, patients: [], patientToUpda
             return { ...state, patientToAddCheckUp: action.payload};
         case FETCH_TO_ADD_TREATMENT:
             return { ...state, patientToAddTreatment: action.payload};
+        case FETCH_TO_ADD_MEDICAL_FOLDER:
+            return { ...state, patientToAddMedicalFolder: action.payload};
         case END_PATIENT_TO_UPDATE:
             return { ...state, patientToUpdate: 0 };
         case END_ADD_CHECKUP:
             return { ...state, patientToAddCheckUp: 0 };
         case END_ADD_TREATMENT:
             return { ...state, patientToAddTreatment: 0 };
+        case END_ADD_MEDICAL_FOLDER:
+            return { ...state, patientToAddMedicalFolder: 0 };
         case CREATE_P:
             return { ...state, patients: [ ...state.patients, action.payload ] };
         case UPDATE_P:
