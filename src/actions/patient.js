@@ -1,5 +1,5 @@
 
-import { FETCH_ALL, FETCH_PATIENT, FETCH_TO_UPDATE_PATIENT, FETCH_BY_SEARCH, END_PATIENT_TO_UPDATE, START_LOADING, END_LOADING, CREATE_P, UPDATE_P, DELETE_P, END_ADD_CHECKUP, FETCH_TO_ADD_CHECKUP, FETCH_TO_ADD_TREATMENT, END_ADD_TREATMENT, FETCH_STATISTIC } from '../constants/actiontypes.js'
+import { FETCH_ALL, FETCH_PATIENT, FETCH_TO_UPDATE_PATIENT, FETCH_BY_SEARCH, END_PATIENT_TO_UPDATE, START_LOADING, END_LOADING, CREATE_P, UPDATE_P, DELETE_P, END_ADD_CHECKUP, FETCH_TO_ADD_CHECKUP, FETCH_TO_ADD_TREATMENT, END_ADD_TREATMENT, FETCH_STATISTIC, END_ADD_MEDICAL_FOLDER, FETCH_TO_ADD_MEDICAL_FOLDER } from '../constants/actiontypes.js'
 
 import * as api from '../api/index.js'
 import moment from 'moment'
@@ -186,7 +186,7 @@ export const patientToAddTreatment = (patient, router) => async (dispatch, getSt
     router('/home/patients/add/treatment')
 }
 
-// delete check-up patient from localstorage
+// delete treatment patient from localstorage
 export const endAddTreatment = () => async(dispatch, getState) => {
     dispatch({
         type: END_ADD_TREATMENT,
@@ -195,6 +195,29 @@ export const endAddTreatment = () => async(dispatch, getState) => {
     localStorage.setItem('patient-to-add-treatment', JSON.stringify(getState().patients.patientToAddTreatment))
 }
 
+// add patient in localstorage to add medical folder
+export const patientToAddMedicalFolder = (patient, router) => async (dispatch, getState) => {
+    dispatch({
+        type: FETCH_TO_ADD_MEDICAL_FOLDER,
+        payload: {
+            patientId: patient._id,
+            fullName: patient.fullName
+        }
+    })
+    localStorage.setItem('patient-to-add-medical-folder', JSON.stringify(getState().patients.patientToAddMedicalFolder))
+    router('/home/patients/add/medical-folder')
+}
+
+// delete medical folder from localstorage
+export const endAddMedicalFolder = () => async(dispatch, getState) => {
+    dispatch({
+        type: END_ADD_MEDICAL_FOLDER,
+    })
+
+    localStorage.setItem('patient-to-add-medical-folder', JSON.stringify(getState().patients.patientToAddMedicalFolder))
+}
+
+// all patients statistic
 export const getStatistic = (MONTHS, setProjectStates) => async (dispatch) => {
     try {
         const { data } = await api.patientStats()
