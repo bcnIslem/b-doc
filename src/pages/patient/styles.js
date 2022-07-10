@@ -49,15 +49,48 @@ export default makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-around',
     },
+    foldercontent:{
+        margin: '20px 0px',
+        padding: '20px 0px',
+        textAlign: 'center'
+    },
     table: {
         margin: '30px 20px',
         width: '40%',
         textAlign: 'center',
     },
+    foldertable: {
+        margin: '30px auto',
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        flexWrap: 'wrap',
+    },
+    medicalFolderTopAction: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '80%'
+    },
+    gridaction: {
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+    action: {
+        zIndex: '20'
+    },
     chechup: {
         marginTop: '10px',
         padding: '10px',
         cursor: 'pointer'
+    },
+    folder: {
+        marginTop: '10px',
+        padding: '10px',
+        cursor: 'pointer',
+        textAlign: 'center',
+        width: '40%',
+        zIndex: '2'
     },
     treatment: {
         marginTop: '10px',
@@ -68,6 +101,7 @@ export default makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         flexWrap: 'wrap',
+        width: '50%'
     },
     graytext: {
         color: 'gray'

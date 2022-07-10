@@ -1,25 +1,46 @@
-
 // hooks
-import moment from 'moment'
+import moment from "moment";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 // material ui components
-import { Grid, Typography } from '@material-ui/core'
+import { Grid, Typography, Button } from "@material-ui/core";
+
+// icons
+import { AiFillDelete } from "react-icons/ai";
 
 // styles
-import useStyles from './styles'
+import useStyles from "./styles";
+import { deleteCheckUp, gotoC } from "../../actions/checkUp";
 
 const CheckUpComponent = ({ item }) => {
-    
-    const classes = useStyles()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const classes = useStyles();
 
-    return (
-        <>
-        <Typography variant='h5' className={classes.graytext}>{moment(item.updatedAt).format('YYYY-MM-DD')}</Typography>
+  return (
+    <Grid className={classes.gridaction}>
+      <Grid
+        className={classes.medicalFolderTopAction}
+        onClick={() => dispatch(gotoC(item, navigate))}
+      >
+        <Typography variant="h5" className={classes.graytext}>
+          {moment(item.updatedAt).format("YYYY-MM-DD")}
+        </Typography>
         <Grid className={classes.wrap}>
-            <Typography variant='h6'>{item.tests.map((test) => ` •${test}`)}</Typography>
+          <Typography variant="h6">
+            {item.tests.map((test) => ` •${test}`)}
+          </Typography>
         </Grid>
-        </>
-    )
-}
+      </Grid>
+      <Button
+        className={classes.action}
+        onClick={() => dispatch(deleteCheckUp(item._id))}
+      >
+        <AiFillDelete size="20" color="#ff0000" />
+      </Button>
+    </Grid>
+  );
+};
 
-export default CheckUpComponent
+export default CheckUpComponent;
