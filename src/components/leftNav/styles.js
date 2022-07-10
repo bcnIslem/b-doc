@@ -95,7 +95,7 @@ export default makeStyles((theme) => ({
     },
     menu: {
         marginTop: '20px',
-        width: '210px',
+        width: '100%',
         height: '50vh',
         display: 'flex',
         flexDirection: 'column',
@@ -105,16 +105,32 @@ export default makeStyles((theme) => ({
     },
     links: {
         margin: '10px 0px 5px 20px',
-        width: '180px',
+        width: '230px',
         display: 'flex',
-        textAlign: 'left',
+        alignItems: 'flex-end',
         color: 'black',
         cursor:' pointer',
-        padding: '5px 0px 5px 5px',
+        padding: '5px 0px 5px 15px',
         '&:hover': {
             color: "black",
             backgroundColor: "#f7f8fc",
-            borderRadius: '5px'
+            borderRadius: '10px 0px 0px 10px'
+        },
+    },
+    linksSelected: {
+        margin: '10px 0px 5px 20px',
+        width: '230px',
+        display: 'flex',
+        alignItems: 'flex-start',
+        color: 'black',
+        cursor:' pointer',
+        backgroundColor: "#f7f8fc",
+        padding: '5px 0px 5px 15px',
+        borderRadius: '10px 0px 0px 10px',
+        '&:hover': {
+            color: "white",
+            backgroundColor: '#33A6FF',
+            borderRadius: '10px 0px 0px 10px'
         },
     },
     item: {
