@@ -1,5 +1,5 @@
 
-import { FETCH_PATIENT_MEDICAL_FOLDERS, FETCH_PATIENT_SINGLE_FOLDER, CREATE_MF, UPDATE_MF, DELETE_MF, START_LOADING, END_LOADING } from '../constants/actiontypes.js'
+import { FETCH_PATIENT_MEDICAL_FOLDERS, FETCH_PATIENT_SINGLE_FOLDER, CREATE_MF, UPDATE_MF, DELETE_MF, START_LOADING, END_LOADING, MEDICAL_FOLDER_TO_PRINT } from '../constants/actiontypes.js'
 
 import * as api from '../api/index.js'
 
@@ -35,7 +35,7 @@ export const addMedicalFolder = (folder, router) => async (dispatch) => {
         dispatch({ type: CREATE_MF, payload: data });
 
         notifyAdd();
-        router(`home/medical-folder-details`);
+        router(`/home/patients/${folder.patientId}`)
     } catch (error) {
         notifyError(error)
     }
@@ -45,7 +45,7 @@ export const addMedicalFolder = (folder, router) => async (dispatch) => {
 export const getAllMedicalFolders = (id) => async (dispatch) => {
     try {
         const { data } = await api.getPatientMedicalFolders(id);
-        dispatch({ type: FETCH_PATIENT_MEDICAL_FOLDERS, payload: data });
+        dispatch({ type: FETCH_PATIENT_MEDICAL_FOLDERS, payload: {data} });
     } catch (error) {
         notifyError(error)
     }
@@ -84,5 +84,15 @@ export const deleteFolder = (id) => async (dispatch) => {
         notifyDelete();
     } catch (error) {
         notifyError(error);
+    }
+}
+
+// 
+export const goToM = (medicalFolder, router) => async (dispatch) => {
+    try {
+        dispatch({ type: MEDICAL_FOLDER_TO_PRINT, payload: medicalFolder })
+        router(`/home/medical-folder-details`)
+    } catch (error) {
+        notifyError(error)
     }
 }
