@@ -31,7 +31,7 @@ export default makeStyles((theme) => ({
         width: '30%',
         display: 'flex',
         justifyContent: 'center',
-        height: '320px',
+        height: '350px',
         '&:hover': {
             boxShadow: '2px 2px 6px black',
         },
@@ -39,7 +39,7 @@ export default makeStyles((theme) => ({
 
     insideleft: {
         width: '64%',
-        height: '320px',
+        height: '350px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between'
@@ -64,7 +64,7 @@ export default makeStyles((theme) => ({
         backgroundColor: '#3be993',
         alignItems: 'center',
         width: '30%',
-        height: '60px',
+        height: '70px',
         textDecoration: 'none',
         '&:hover': {
             boxShadow: '2px 2px 6px black',
