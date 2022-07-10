@@ -61,6 +61,8 @@ export const CREATE_MF ='CREATE_NF'
 export const UPDATE_MF ='UPDATE_MF'
 export const DELETE_MF ='DELETE_MF'
 
+export const MEDICAL_FOLDER_TO_PRINT = 'MEDICAL_FOLDER_TO_PRINT'
+
 export const MEDICAL_FOLDER_TO_UPDATE = 'MEDICAL_FOLDER_TO_UPDATE'
 
 //loading
