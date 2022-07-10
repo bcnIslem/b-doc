@@ -22,6 +22,8 @@ import Settings from './pages/settings/Settings'
 import TreatmentDetails from './pages/treatmentDetails/TreatmentDetails'
 import Help from './pages/help/Help'
 import CheckUpDetails from './pages/checkUpDetails/CheckUpDetails'
+import AddMEdicalFolder from './pages/addMedicalFolder/AddMEdicalFolder'
+import MedicalFolderDetails from './pages/medicalFolderDetails/MedicalFolderDetails'
 
 const App = () => {
 
@@ -68,6 +70,14 @@ const App = () => {
                     </Route>
                     <Route path='/home/treatment-details' element={<ProtectedRoute />}>
                         <Route exact path='/home/treatment-details' element={<TreatmentDetails />} />
+                    </Route>
+
+                    <Route path='/home/patients/add/medical-folder' element={<ProtectedRoute />}>
+                        <Route exact path='/home/patients/add/medical-folder' element={<AddMEdicalFolder />} />
+                    </Route>
+                    
+                    <Route path='/home/medical-folder-details' element={<ProtectedRoute />}>
+                        <Route exact path='/home/medical-folder-details' element={<MedicalFolderDetails />} />
                     </Route>
 
                     <Route path='/help' element={<ProtectedRoute />}>
