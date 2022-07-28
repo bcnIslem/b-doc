@@ -89,3 +89,14 @@ export const updateMedicalFolder = (id, folder) => API.patch(`/medical-folders/$
 
 // delete folder
 export const deleteMedicalFolder = (id) => API.delete(`/medical-folders/${id}`)
+
+// prescription
+
+// add
+export const addPrescription = (data) => API.post('/prescription', data)
+
+// get
+export const getPrescription = () => API.get('/prescription')
+
+// update
+export const updatePrescription = (id, prescription) => API.patch(`/prescription/update/${id}`, prescription)
