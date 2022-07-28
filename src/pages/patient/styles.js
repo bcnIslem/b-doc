@@ -63,7 +63,6 @@ export default makeStyles((theme) => ({
         margin: '30px auto',
         width: '100%',
         display: 'flex',
-        alignItems: 'center',
         justifyContent: 'space-around',
         flexWrap: 'wrap',
     },
@@ -88,9 +87,7 @@ export default makeStyles((theme) => ({
         marginTop: '10px',
         padding: '10px',
         cursor: 'pointer',
-        textAlign: 'center',
         width: '40%',
-        zIndex: '2'
     },
     treatment: {
         marginTop: '10px',
