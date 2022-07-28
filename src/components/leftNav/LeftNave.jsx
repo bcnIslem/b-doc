@@ -20,7 +20,7 @@ import { RiLogoutBoxRFill, RiHome4Fill } from "react-icons/ri";
 import { IoSettingsSharp } from "react-icons/io5";
 import { IoIosHelpCircle } from "react-icons/io";
 import { HiMenuAlt1 } from "react-icons/hi";
-import { CgMenuLeft } from "react-icons/cg";
+import { CgMenuLeft, CgProfile } from "react-icons/cg";
 
 // styles
 import useStyles from "./styles";
@@ -152,6 +152,14 @@ const LeftNave = () => {
               <MdSpaceDashboard size="25" />
               <Typography className={classes.item} variant="body1">
                 {t("LeftNav.2")}
+              </Typography>
+            </div>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/profile">
+            <div className={classes.links}>
+              <CgProfile size="25" />
+              <Typography className={classes.item} variant="body1">
+                Profile
               </Typography>
             </div>
           </Link>
