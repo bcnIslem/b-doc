@@ -98,14 +98,6 @@ const AddMEdicalFolder = () => {
                   })
                 }
               />
-              {/* <div className={classes.fileInput}>
-                <input type="file" multiple={true} onChange={handleImage} />
-                {/* <FileBase
-                  type="file"
-                  multiple={false}
-                  onDone={({ base64 }) => console.log("base:", base64)}
-                />
-              </div> */}
               <div className={classes.folderBtn}>
                 {" "}
                 <ReactImageFileToBase64
