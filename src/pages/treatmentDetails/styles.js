@@ -33,11 +33,12 @@ export default makeStyles((theme) => ({
         margin: 'auto'
     },
     patient: {
-        margin: '100px auto 40px 60px'
+        margin: '30px',
+        display: 'flex',
+        justifyContent: 'space-between'
     },
     lign: {
-        width: '80%',
-        margin: '30px 0px 0px auto'
+        margin: '30px'
     },
     medName: {
         display: 'flex',
@@ -47,13 +48,17 @@ export default makeStyles((theme) => ({
     ruleName: {
         fontWeight: '500'
     },
-    medications: {
-    },
     rules: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
         width: '100%'
+    },
+    header: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        borderBottom: '1px solid black',
     },
 
     [theme.breakpoints.down('sm')]: {
