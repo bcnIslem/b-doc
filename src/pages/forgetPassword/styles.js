@@ -14,6 +14,7 @@ export default makeStyles((theme) => ({
     },
     paper:{
         margin:'auto',
+        borderRadius: '15px',
     },
     form:{
         //minHeight: '50vh',

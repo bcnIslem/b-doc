@@ -12,6 +12,7 @@ export default makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: '5px',
+        cursor: 'pointer',
         '&:hover': {
             boxShadow: '2px 2px 6px gray',
         },
@@ -29,20 +30,26 @@ export default makeStyles((theme) => ({
     main: {
         padding: '10px',
         backgroundColor: 'white',
-        //width: '75%',
+        borderRadius: '15px',
         margin: 'auto'
     },
     patient: {
-        margin: '100px auto 40px 60px'
+        margin: '30px',
+        display: 'flex',
+        justifyContent: 'space-between'
     },
     lign: {
-        width: '80%',
-        margin: '30px 0px 0px auto'
+        margin: '30px'
     },
     medName: {
         fontWeight: '500'
     },
-
+    header: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        borderBottom: '1px solid black',
+    },
 
     [theme.breakpoints.down('sm')]: {
 

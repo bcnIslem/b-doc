@@ -163,7 +163,7 @@ const Patient = () => {
                   return (
                     <Paper
                       className={classes.folder}
-                      elevation={6}
+                      elevation={2}
                       key={medicalFolder._id}
                     >
                       <MedicalFolderComponent
@@ -193,7 +193,7 @@ const Patient = () => {
                   return (
                     <Paper
                       className={classes.chechup}
-                      elevation={6}
+                      elevation={2}
                       key={checkUp._id}
                     >
                       <CheckUpComponent item={checkUp} key={checkUp._id} />
@@ -217,7 +217,7 @@ const Patient = () => {
                   return (
                     <Paper
                       className={classes.treatment}
-                      elevation={6}
+                      elevation={2}
                       key={treat._id}
                     >
                       <TreatmentComponent item={treat} key={treat._id} />

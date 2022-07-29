@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
     main:{
         display: 'flex',
+        height: '100vh',
     },
     container: {
         maxHeight: '100vh !important',

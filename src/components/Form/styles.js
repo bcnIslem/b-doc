@@ -4,6 +4,7 @@ export default makeStyles((theme) => ({
     paper: {
         padding: '5px',
         width: '100%',
+        borderRadius: '15px',
     },
     title:{
         margin: '5px 0px !important',

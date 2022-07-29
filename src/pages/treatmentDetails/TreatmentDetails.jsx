@@ -79,10 +79,10 @@ const TreatmentDetails = () => {
           </Grid>
         </Grid>
         <Grid className={classes.patient}>
-          <Typography variant="h5">
+          <Typography variant="h6">
             Full Name: {treatmentToPrint.patientName}
           </Typography>
-          <Typography variant="h5">
+          <Typography variant="h6">
             date: {moment().format("YYYY-MM-DD")}
           </Typography>
         </Grid>

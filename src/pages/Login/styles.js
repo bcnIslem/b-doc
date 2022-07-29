@@ -14,7 +14,7 @@ export default makeStyles((theme) => ({
     },
     paper:{
         margin:'auto',
-        borderRadius: '10px',
+        borderRadius: '15px',
     },
     form:{
         padding: '10px',

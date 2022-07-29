@@ -32,6 +32,7 @@ export default makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         height: '350px',
+        borderRadius: '15px',
         '&:hover': {
             boxShadow: '2px 2px 6px black',
         },
@@ -52,6 +53,7 @@ export default makeStyles((theme) => ({
     topChart: {
         width: '100%',
         display: 'flex',
+        borderRadius: '15px',
         '&:hover': {
             boxShadow: '2px 2px 6px gray',
         },
@@ -66,6 +68,7 @@ export default makeStyles((theme) => ({
         width: '30%',
         height: '70px',
         textDecoration: 'none',
+        borderRadius: '15px',
         '&:hover': {
             boxShadow: '2px 2px 6px black',
         },
@@ -91,26 +94,29 @@ export default makeStyles((theme) => ({
         justifyContent: 'space-between',
     },
     bottonPaper: {
-        width: '30%',
+        width: '31%',
         height: '320px',
+        borderRadius: '15px',
         '&:hover': {
             boxShadow: '2px 2px 6px black',
         },
     },
     datePaper: {
-        width: '30%',
+        width: '31%',
         height: '320px',
+        borderRadius: '15px',
         '&:hover': {
             boxShadow: '2px 2px 6px black',
         },
     },
     cerclePaper: {
-        width: '30%',
+        width: '31%',
         height: '320px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
         alignItems: 'center',
+        borderRadius: '15px',
         '&:hover': {
             boxShadow: '2px 2px 6px black',
         },

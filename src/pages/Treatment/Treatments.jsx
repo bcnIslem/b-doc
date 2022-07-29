@@ -49,7 +49,7 @@ const Treatments = () => {
             <Typography variant="h6">Actions</Typography>
           </div>
         </Paper>
-        <Grid className={classes.table}>
+        <Paper className={classes.table} elevation={3}>
           {!treatments?.length ? (
             <Loading />
           ) : (
@@ -61,7 +61,7 @@ const Treatments = () => {
                 </Grid>
               ))
           )}
-        </Grid>
+        </Paper>
       </Container>
     </div>
   );

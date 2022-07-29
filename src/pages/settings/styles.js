@@ -26,7 +26,8 @@ export default makeStyles((theme) => ({
     name: {
         width: '50vw',
         padding: '2px 0px',
-        marginBottom: '40px'
+        marginBottom: '40px',
+        borderRadius: '15px',
     },
     textfield:{
         margin: '5px 0px',

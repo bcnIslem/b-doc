@@ -45,7 +45,7 @@ const CheckUps = () => {
             <Typography variant="h6">Actions</Typography>
           </div>
         </Paper>
-        <Grid className={classes.table}>
+        <Paper className={classes.table} elevation={3}>
           {!checkUps?.length ? (
             <Loading />
           ) : (
@@ -57,7 +57,7 @@ const CheckUps = () => {
                 </Grid>
               ))
           )}
-        </Grid>
+        </Paper>
       </Container>
     </div>
   );

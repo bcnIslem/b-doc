@@ -50,6 +50,7 @@ export default makeStyles((theme) => ({
     table:{
         maxHeight: '60vh',
         overflowY: 'scroll',
+        borderRadius: '15px',
     },
 
     [theme.breakpoints.down('sm')]: {

@@ -44,9 +44,7 @@ const AddMEdicalFolder = () => {
 
     medicalFolderData.patientId = patientToAddMedicalFolder.patientId;
 
-    //setMedicalFolderData({ ...medicalFolderData, folders: folderData });
     medicalFolderData.folder.push(folderData);
-    console.log("data:", medicalFolderData);
     dispatch(addMedicalFolder(medicalFolderData, navigate));
     clear();
   };

@@ -226,7 +226,12 @@ const Dashboard = () => {
             ) : (
               <Grid className={classes.topChart}>
                 <Grid className={classes.chart}>
-                  <Paper elevation={3}>
+                  <Paper
+                    elevation={3}
+                    style={{
+                      borderRadius: "15px",
+                    }}
+                  >
                     <PatientChart data={statistic} dataKey={data} />
                   </Paper>
                 </Grid>

@@ -12,6 +12,7 @@ export default makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: '5px',
+        cursor: 'pointer',
         '&:hover': {
             boxShadow: '2px 2px 6px gray',
         },
@@ -29,7 +30,7 @@ export default makeStyles((theme) => ({
     main: {
         padding: '10px',
         backgroundColor: 'white',
-        //width: '75%',
+        borderRadius: '15px',
         margin: 'auto'
     },
     patient: {

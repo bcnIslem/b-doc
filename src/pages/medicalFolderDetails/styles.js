@@ -12,6 +12,7 @@ export default makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: '5px',
+        cursor: 'pointer',
         '&:hover': {
             boxShadow: '2px 2px 6px gray',
         },
@@ -29,11 +30,13 @@ export default makeStyles((theme) => ({
     main: {
         padding: '10px',
         backgroundColor: 'white',
-        //width: '75%',
-        margin: 'auto'
+        borderRadius: '15px',
+        margin: '30px auto'
     },
     patient: {
-        margin: '100px auto 40px 60px'
+        margin: '30px',
+        display: 'flex',
+        justifyContent: 'space-between'
     },
     lign: {
         width: '80%',
@@ -46,6 +49,12 @@ export default makeStyles((theme) => ({
         width: '100%',
         height: '100vh',
         backgroundSize: 'contain'
+    },
+    header: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        borderBottom: '1px solid black',
     },
 
 

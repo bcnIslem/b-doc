@@ -58,19 +58,19 @@ const Home = () => {
             <Typography variant="h6">Actions</Typography>
           </div>
         </Paper>
-        <Grid className={classes.table}>
+        <Paper className={classes.table} elevation={3}>
           {!patients?.length ? (
             <Loading />
           ) : (
             patients
               ?.sort((a, b) => (a.updatedAt > b.updatedAt ? -1 : 1))
               .map((item) => (
-                <Grid className={classes.table} item key={item._id}>
+                <Grid item key={item._id}>
                   <Patient item={item} key={item._id} />
                 </Grid>
               ))
           )}
-        </Grid>
+        </Paper>
       </Container>
     </div>
   );

@@ -35,6 +35,7 @@ export default makeStyles((theme) => ({
         marginTop: '10px',
         maxHeight: '60vh',
         overflowY: 'scroll',
+        borderRadius: '15px',
 
     },
 

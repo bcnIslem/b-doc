@@ -7,6 +7,7 @@ export default makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        borderRadius: '15px',
     },
     grid:{
         display: 'flex',
@@ -30,12 +31,13 @@ export default makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        borderRadius: '10px',
     },
     btn: {
         margin: '0px 20px',
         color: 'white',
         backgroundColor: '#33A6FF',
-        boxShadow: '2px 2px 6px gray',
+        boxShadow: '2px 2px 3px lightblue',
         width: '200px',
         padding: '8px 20px',
         '&:hover': {
@@ -48,11 +50,13 @@ export default makeStyles((theme) => ({
         margin: '20px 0px',
         display: 'flex',
         justifyContent: 'space-around',
+        borderRadius: '15px',
     },
     foldercontent:{
         margin: '20px 0px',
         padding: '20px 0px',
-        textAlign: 'center'
+        textAlign: 'center',
+        borderRadius: '15px',
     },
     table: {
         margin: '30px 20px',
@@ -63,7 +67,6 @@ export default makeStyles((theme) => ({
         margin: '30px auto',
         width: '100%',
         display: 'flex',
-        justifyContent: 'space-around',
         flexWrap: 'wrap',
     },
     medicalFolderTopAction: {
@@ -84,7 +87,7 @@ export default makeStyles((theme) => ({
         cursor: 'pointer'
     },
     folder: {
-        marginTop: '10px',
+        margin: '10px 60px',
         padding: '10px',
         cursor: 'pointer',
         width: '40%',
@@ -92,7 +95,7 @@ export default makeStyles((theme) => ({
     treatment: {
         marginTop: '10px',
         padding: '10px',
-        cursor: 'pointer'
+        cursor: 'pointer',
     },
     wrap: {
         display: 'flex',

@@ -15,12 +15,12 @@ import { Grid, Paper, Typography } from "@material-ui/core";
 import ProDoc from "../../assets/ProDoc.jpg";
 
 // icons
-import { MdSpaceDashboard } from "react-icons/md";
-import { RiLogoutBoxRFill, RiHome4Fill } from "react-icons/ri";
+import { MdSpaceDashboard, MdAccountCircle } from "react-icons/md";
+import { RiLogoutCircleRFill } from "react-icons/ri";
 import { IoSettingsSharp } from "react-icons/io5";
 import { IoIosHelpCircle } from "react-icons/io";
-import { HiMenuAlt1 } from "react-icons/hi";
-import { CgMenuLeft, CgProfile } from "react-icons/cg";
+import { HiMenuAlt1, HiHome } from "react-icons/hi";
+import { CgMenuLeft } from "react-icons/cg";
 
 // styles
 import useStyles from "./styles";
@@ -135,7 +135,7 @@ const LeftNave = () => {
         <Grid className={classes.menu}>
           <Link style={{ textDecoration: "none" }} to="/home">
             <div className={classes.links}>
-              <RiHome4Fill size="25" />
+              <HiHome size="25" />
               <Typography className={classes.item} variant="body1">
                 {t("LeftNav.1")}
               </Typography>
@@ -157,7 +157,7 @@ const LeftNave = () => {
           </Link>
           <Link style={{ textDecoration: "none" }} to="/profile">
             <div className={classes.links}>
-              <CgProfile size="25" />
+              <MdAccountCircle size="25" />
               <Typography className={classes.item} variant="body1">
                 Profile
               </Typography>
@@ -181,7 +181,7 @@ const LeftNave = () => {
           </Link>
           <Link style={{ textDecoration: "none" }} to="/">
             <div className={classes.links} onClick={logout}>
-              <RiLogoutBoxRFill size="25" />
+              <RiLogoutCircleRFill size="25" />
               <Typography className={classes.item} variant="body1">
                 {t("LeftNav.5")}
               </Typography>
