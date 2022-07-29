@@ -6,12 +6,14 @@ import { useDispatch } from "react-redux";
 // material ui components
 import { Grid, Typography, Button } from "@material-ui/core";
 
+// actions
+import { deleteTreatment, goTo } from "../../actions/treatment";
+
 // icons
 import { AiFillDelete } from "react-icons/ai";
 
 // styles
 import useStyles from "./styles";
-import { deleteTreatment, goTo } from "../../actions/treatment";
 
 const TreatmentComponent = ({ item }) => {
   const navigate = useNavigate();

@@ -84,11 +84,6 @@ const Dashboard = () => {
     []
   );
 
-  // loading props
-  const type = "bars";
-  const color = "lightblue";
-  const nameChart = "statistics";
-
   const data = "added patients";
 
   const { patients } = useSelector((state) => state.patients);
@@ -226,7 +221,7 @@ const Dashboard = () => {
             {/* waiting for the missing monthes befor render the chart */}
             {!patientsStats?.length ? (
               <Grid className={classes.loading}>
-                <Loading type={type} color={color} name={nameChart} />
+                <Loading />
               </Grid>
             ) : (
               <Grid className={classes.topChart}>

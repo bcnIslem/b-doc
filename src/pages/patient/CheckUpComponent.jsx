@@ -6,12 +6,14 @@ import { useDispatch } from "react-redux";
 // material ui components
 import { Grid, Typography, Button } from "@material-ui/core";
 
+// actions
+import { deleteCheckUp, gotoC } from "../../actions/checkUp";
+
 // icons
 import { AiFillDelete } from "react-icons/ai";
 
 // styles
 import useStyles from "./styles";
-import { deleteCheckUp, gotoC } from "../../actions/checkUp";
 
 const CheckUpComponent = ({ item }) => {
   const navigate = useNavigate();

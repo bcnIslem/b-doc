@@ -1,18 +1,18 @@
+// mui components
+import { Stack, Skeleton } from "@mui/material";
 
-import ReactLoading from 'react-loading';
-
-import useStyles from './styles'
-
-const Loading = ({ type, color, name }) => {
-
-    const classes = useStyles()
-    
-    return (
-        <div className={classes.container}>
-            <ReactLoading type={type} color={color} height={100} width={100} />
-            <h4>No {name} Yet!</h4>
-        </div>
-    )
+// styles
+import useStyles from "./styles";
+const Loading = () => {
+  const classes = useStyles();
+  return (
+    <div className={classes.container}>
+      <Stack spacing={1}>
+        <Skeleton variant="text" />
+        <Skeleton variant="rectangular" width={210} height={80} />
+      </Stack>
+    </div>
+  );
 };
 
 export default Loading;

@@ -51,14 +51,7 @@ const Patient = () => {
     dispatch(getAllCheckUps());
   }, [id, dispatch]);
 
-  const color = "lightblue";
-  const type = "bars";
-  const name = "Patient";
-  const checkUpName = "CheckUp";
-  const TreatmentName = "Treatment";
-  const MedicalFolders = "Medical Folders";
-
-  if (!patient) return <Loading color={color} type={type} name={name} />;
+  if (!patient) return <Loading />;
 
   const handleAddCheckUp = () => {
     dispatch(patientToCheckUp(patient, navigate));
@@ -159,7 +152,7 @@ const Patient = () => {
         <Typography variant="h6">Medical Folders</Typography>
         <Grid className={classes.foldertable}>
           {!medicalFolders?.length ? (
-            <Loading color={color} type={type} name={MedicalFolders} />
+            <Loading />
           ) : (
             medicalFolders
               ?.sort((a, b) => (a.updatedAt > b.updatedAt ? -1 : 1))
@@ -189,7 +182,7 @@ const Patient = () => {
         <Grid className={classes.table}>
           <Typography variant="h6">{t("PatientDetails.5")}</Typography>
           {!checkUps?.length ? (
-            <Loading color={color} type={type} name={checkUpName} />
+            <Loading />
           ) : (
             checkUps
               ?.sort((a, b) => (a.updatedAt > b.updatedAt ? -1 : 1))
@@ -213,7 +206,7 @@ const Patient = () => {
         <Grid className={classes.table}>
           <Typography variant="h6">{t("PatientDetails.6")}</Typography>
           {!treatments?.length ? (
-            <Loading color={color} type={type} name={TreatmentName} />
+            <Loading />
           ) : (
             treatments
               ?.sort((a, b) => (a.updatedAt > b.updatedAt ? -1 : 1))

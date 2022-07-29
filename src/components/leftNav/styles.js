@@ -40,7 +40,7 @@ export default makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         width: '180px',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
     },
     gridOne:{
         width: '40px',
@@ -52,7 +52,7 @@ export default makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         width: '180px',
-        justifyContent: 'space-around'
+        justifyContent: 'space-evenly'
     },
     circle:{
         width: '40px',

@@ -7,6 +7,7 @@ import moment from "moment";
 // material ui components
 import { Button, Container, Grid, Typography } from "@material-ui/core";
 
+// actions
 import { getPrescriptions } from "../../actions/prescription";
 
 // icons

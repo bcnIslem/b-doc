@@ -1,12 +1,22 @@
-import { DateRange } from "react-date-range";
+// hooks
 import { useEffect, useState } from "react";
-import "react-date-range/dist/styles.css"; // main css file
-import "react-date-range/dist/theme/default.css"; // theme css file
+import { useDispatch } from "react-redux";
+
+// date range components
+import { DateRange } from "react-date-range";
+
+// m-ui components
 import { Grid } from "@material-ui/core";
 
-import useStyles from "./styles";
+// date styles
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
+
+// actions
 import { getPatientsByDate } from "../../actions/patient";
-import { useDispatch } from "react-redux";
+
+// styles
+import useStyles from "./styles";
 
 const Calander = ({ setPatientsDate }) => {
   const dispatch = useDispatch();

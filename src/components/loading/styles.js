@@ -7,7 +7,6 @@ export default makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        color: 'gray'
     },
 
 }));

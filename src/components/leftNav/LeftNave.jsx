@@ -86,16 +86,16 @@ const LeftNave = () => {
                 <img
                   src={ProDoc}
                   style={{
-                    borderRadius: "10px",
-                    boxShadow: "2px 2px 6px black",
+                    borderRadius: "50px",
+                    boxShadow: "2px 2px 6px gray",
                   }}
                   alt="ProDoc Logo"
-                  width="40px"
-                  height="40px"
+                  width="45px"
+                  height="45px"
                 />
               </Link>
             </Grid>
-            <Typography className={classes.typo} variant="h6">
+            <Typography className={classes.typo} variant="h5">
               ProDoc
             </Typography>
           </Grid>
@@ -109,7 +109,7 @@ const LeftNave = () => {
                 {doc.lastName[0].toUpperCase()}
               </Typography>
             </Paper>
-            <Typography className={classes.typo} variant="body1">
+            <Typography className={classes.typo} variant="h5">
               {doc.userName}
             </Typography>
           </Grid>
